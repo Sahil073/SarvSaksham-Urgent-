@@ -51,7 +51,7 @@ header {
 
 .language-toggle {
     background-color: #1976D2; /* Matches the primary blue color used in the theme (e.g., page-header color) */
-    color: white;
+    color: black;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;

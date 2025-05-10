@@ -309,3 +309,23 @@ document.querySelector(".theme-toggle").addEventListener("click", () => {
 
 // Initialize language on page load
 toggleLanguage();
+        document.addEventListener('keydown', function (event) {
+    if (event.keyCode === 123) { // F12
+        event.preventDefault();
+    }
+    if (event.ctrlKey && event.shiftKey && (event.keyCode === 73 || event.keyCode === 74)) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && event.keyCode === 85) { // Ctrl + U
+        event.preventDefault();
+    }
+});
+document.addEventListener('contextmenu', event => event.preventDefault());
+setInterval(function () {
+    const before = new Date();
+    debugger;
+    const after = new Date();
+    if (after - before > 100) {
+        window.location.href = "about:blank"; // or any action you want
+    }
+}, 1000);
