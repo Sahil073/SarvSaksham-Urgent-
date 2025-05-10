@@ -47,7 +47,32 @@ header {
     margin: 0;
     padding: 0;
 }
+/* Existing styles remain unchanged, adding new styles for the language-toggle button at the end */
 
+.language-toggle {
+    background-color: #1976D2; /* Matches the primary blue color used in the theme (e.g., page-header color) */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px; /* Matches the border-radius of other buttons like .signup and .contact */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth hover effects */
+}
+
+.language-toggle:hover {
+    transform: scale(1.05); /* Matches the hover effect of other buttons */
+    background-color: #1565C0; /* Slightly darker shade of blue for hover effect */
+}
+
+.dark-mode .language-toggle {
+    background-color: #66b2ff; /* Lighter blue to contrast with dark mode background */
+    color: #1a1a1a;
+}
+
+.dark-mode .language-toggle:hover {
+    background-color: #99c2ff; /* Lighter shade for hover in dark mode */
+}
 .nav-links li a {
     text-decoration: none;
     color: black;

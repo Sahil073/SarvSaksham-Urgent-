@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Aid</title>
+    <title data-lang="title">First Aid</title>
     <link rel="stylesheet" href="./firstaid.css">
-    <link rel="icon" type="image/png" href="../images/mainlogo.png">
+    <link rel="icon" type="image/png" href="../../images/mainlogo.png">
     <link href="./firstaid.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="nav">
-            <div class="logo">Emergency Help</div>
+            <div class="logo" data-lang="nav-logo">Emergency Help</div>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <i class="ri-menu-line"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./firstaid.html">First Aid</a></li>
-                <li><a href="../helpline/hindex.html">Helpline</a></li>
+                <li><a href="../index.html" data-lang="nav-home">Home</a></li>
+                <li><a href="./firstaid.html" data-lang="nav-first-aid">First Aid</a></li>
+                <li><a href="../helpline/hindex.html" data-lang="nav-helpline">Helpline</a></li>
             </ul>
+            <div class="nav-
+                <button class="language-toggle" onclick="toggleLanguage()" aria-label="Toggle language between English and Hindi" data-lang="lang-toggle">हिन्दी</button>
+            </div>
         </div>
     </header>
 
     <section class="page-header">
-        <h1>First Aid Services</h1>
-        <p>Learn how to provide immediate care in emergencies</p>
+        <h1 data-lang="page-title">First Aid Services</h1>
+        <p data-lang="page-subtitle">Learn how to provide immediate care in emergencies</p>
     </section>
 
     <section class="search-section">
-        <input type="text" id="searchBar" placeholder="Search First Aid Methods..." onkeyup="filterCards()">
+        <input type="text" id="searchBar" placeholder="Search First Aid Methods..." data-lang-placeholder="search-placeholder" onkeyup="filterCards()">
     </section>
 
     <main>
         <div class="container">
             <div class="cards" id="cardContainer">
                 <div class="card" data-title="Burns">
-                    <h2>Burns</h2>
+                    <h2 data-lang="card-burns-title">Burns</h2>
                     <img src="../images/burn.jpg" alt="Burn injury" height="250px">
-                    <p>Cool the burn with running water for at least 10 minutes.</p>
-                    <button class="openPopup" aria-label="Learn more about burns first aid">Read More</button>
+                    <p data-lang="card-burns-desc">Cool the burn with running water for at least 10 minutes.</p>
+                    <button class="openPopup" aria-label="Learn more about burns first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Burns</h3>
+                                <h3 class="popup-title" data-lang="card-burns-title">Burns</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -55,14 +58,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Cuts">
-                    <h2>Cuts</h2>
+                    <h2 data-lang="card-cuts-title">Cuts</h2>
                     <img src="../images/cuts.jpg" alt="Cut injury" height="250px">
-                    <p>Apply pressure with a clean cloth to stop bleeding.</p>
-                    <button class="openPopup" aria-label="Learn more about cuts first aid">Read More</button>
+                    <p data-lang="card-cuts-desc">Apply pressure with a clean cloth to stop bleeding.</p>
+                    <button class="openPopup" aria-label="Learn more about cuts first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Cuts</h3>
+                                <h3 class="popup-title" data-lang="card-cuts-title">Cuts</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -74,14 +77,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Choking">
-                    <h2>Choking</h2>
+                    <h2 data-lang="card-choking-title">Choking</h2>
                     <img src="../images/Choking.jpeg" alt="Choking scenario" height="250px">
-                    <p>Perform back blows and abdominal thrusts.</p>
-                    <button class="openPopup" aria-label="Learn more about choking first aid">Read More</button>
+                    <p data-lang="card-choking-desc">Perform back blows and abdominal thrusts.</p>
+                    <button class="openPopup" aria-label="Learn more about choking first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Choking</h3>
+                                <h3 class="popup-title" data-lang="card-choking-title">Choking</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -93,14 +96,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Fractures">
-                    <h2>Fractures</h2>
+                    <h2 data-lang="card-fractures-title">Fractures</h2>
                     <img src="../images/Fractures.jpeg" alt="Fracture injury" height="250px">
-                    <p>Immobilize the affected area and seek medical help.</p>
-                    <button class="openPopup" aria-label="Learn more about fractures first aid">Read More</button>
+                    <p data-lang="card-fractures-desc">Immobilize the affected area and seek medical help.</p>
+                    <button class="openPopup" aria-label="Learn more about fractures first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Fractures</h3>
+                                <h3 class="popup-title" data-lang="card-fractures-title">Fractures</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -112,14 +115,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Food Poisoning">
-                    <h2>Food Poisoning</h2>
+                    <h2 data-lang="card-food-poisoning-title">Food Poisoning</h2>
                     <img src="../images/food poision.jpeg" alt="Food poisoning scenario" height="250px">
-                    <p>Keep the person hydrated and seek medical help.</p>
-                    <button class="openPopup" aria-label="Learn more about food poisoning first aid">Read More</button>
+                    <p data-lang="card-food-poisoning-desc">Keep the person hydrated and seek medical help.</p>
+                    <button class="openPopup" aria-label="Learn more about food poisoning first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Food Poisoning</h3>
+                                <h3 class="popup-title" data-lang="card-food-poisoning-title">Food Poisoning</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -131,14 +134,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Nosebleeds">
-                    <h2>Nosebleeds</h2>
+                    <h2 data-lang="card-nosebleeds-title">Nosebleeds</h2>
                     <img src="../images/Nosebleeds.jpeg" alt="Nosebleed scenario" height="250px">
-                    <p>Pinch the nose and lean forward to stop bleeding.</p>
-                    <button class="openPopup" aria-label="Learn more about nosebleeds first aid">Read More</button>
+                    <p data-lang="card-nosebleeds-desc">Pinch the nose and lean forward to stop bleeding.</p>
+                    <button class="openPopup" aria-label="Learn more about nosebleeds first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Nosebleeds</h3>
+                                <h3 class="popup-title" data-lang="card-nosebleeds-title">Nosebleeds</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -150,14 +153,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Chemical Burns">
-                    <h2>Chemical Burns</h2>
+                    <h2 data-lang="card-chemical-burns-title">Chemical Burns</h2>
                     <img src="../images/Chemical Burns.jpg" alt="Chemical burn injury" height="250px">
-                    <p>Rinse the area with water for at least 15 minutes.</p>
-                    <button class="openPopup" aria-label="Learn more about chemical burns first aid">Read More</button>
+                    <p data-lang="card-chemical-burns-desc">Rinse the area with water for at least 15 minutes.</p>
+                    <button class="openPopup" aria-label="Learn more about chemical burns first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Chemical Burns</h3>
+                                <h3 class="popup-title" data-lang="card-chemical-burns-title">Chemical Burns</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -169,14 +172,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Asthma Attack">
-                    <h2>Asthma Attack</h2>
+                    <h2 data-lang="card-asthma-attack-title">Asthma Attack</h2>
                     <img src="../images/Asthma Attack.jpeg" alt="Asthma attack scenario" height="250px">
-                    <p>Help the person use their inhaler and sit upright.</p>
-                    <button class="openPopup" aria-label="Learn more about asthma attack first aid">Read More</button>
+                    <p data-lang="card-asthma-attack-desc">Help the person use their inhaler and sit upright.</p>
+                    <button class="openPopup" aria-label="Learn more about asthma attack first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Asthma Attack</h3>
+                                <h3 class="popup-title" data-lang="card-asthma-attack-title">Asthma Attack</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -188,14 +191,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Snake Bite">
-                    <h2>Snake Bite</h2>
+                    <h2 data-lang="card-snake-bite-title">Snake Bite</h2>
                     <img src="../images/Snake Bite.jpeg" alt="Snake bite injury" height="250px">
-                    <p>Keep the person calm and immobilize the bitten area.</p>
-                    <button class="openPopup" aria-label="Learn more about snake bite first aid">Read More</button>
+                    <p data-lang="card-snake-bite-desc">Keep the person calm and immobilize the bitten area.</p>
+                    <button class="openPopup" aria-label="Learn more about snake bite first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Snake Bite</h3>
+                                <h3 class="popup-title" data-lang="card-snake-bite-title">Snake Bite</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -207,14 +210,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Animal Bites & Insect Stings">
-                    <h2>Animal Bites & Insect Stings</h2>
+                    <h2 data-lang="card-animal-bites-title">Animal Bites & Insect Stings</h2>
                     <img src="../images/Animal Bites & Insect Stings.webp" alt="Animal bite or insect sting scenario" height="250px">
-                    <p>Wash the area with soap and water; monitor for reactions.</p>
-                    <button class="openPopup" aria-label="Learn more about animal bites and insect stings first aid">Read More</button>
+                    <p data-lang="card-animal-bites-desc">Wash the area with soap and water; monitor for reactions.</p>
+                    <button class="openPopup" aria-label="Learn more about animal bites and insect stings first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Animal Bites & Insect Stings</h3>
+                                <h3 class="popup-title" data-lang="card-animal-bites-title">Animal Bites & Insect Stings</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -226,14 +229,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Road Accident">
-                    <h2>Road Accident</h2>
+                    <h2 data-lang="card-road-accident-title">Road Accident</h2>
                     <img src="../images/road accident.jpg" alt="Road accident scenario" height="250px">
-                    <p>Ensure safety, then check for responsiveness and call for help.</p>
-                    <button class="openPopup" aria-label="Learn more about road accident first aid">Read More</button>
+                    <p data-lang="card-road-accident-desc">Ensure safety, then check for responsiveness and call for help.</p>
+                    <button class="openPopup" aria-label="Learn more about road accident first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Road Accident</h3>
+                                <h3 class="popup-title" data-lang="card-road-accident-title">Road Accident</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -245,14 +248,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Heatstroke & Hypothermia">
-                    <h2>Heatstroke & Hypothermia</h2>
+                    <h2 data-lang="card-heatstroke-hypothermia-title">Heatstroke & Hypothermia</h2>
                     <img src="../images/Heatstroke & Hypothermia.jpg" alt="Heatstroke or hypothermia scenario" height="250px">
-                    <p>Move to a suitable environment and regulate body temperature.</p>
-                    <button class="openPopup" aria-label="Learn more about heatstroke and hypothermia first aid">Read More</button>
+                    <p data-lang="card-heatstroke-hypothermia-desc">Move to a suitable environment and regulate body temperature.</p>
+                    <button class="openPopup" aria-label="Learn more about heatstroke and hypothermia first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Heatstroke & Hypothermia</h3>
+                                <h3 class="popup-title" data-lang="card-heatstroke-hypothermia-title">Heatstroke & Hypothermia</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -264,14 +267,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Electric Shock">
-                    <h2>Electric Shock</h2>
+                    <h2 data-lang="card-electric-shock-title">Electric Shock</h2>
                     <img src="../images/electricshock.jpeg" alt="Electric shock scenario" height="250px">
-                    <p>Turn off the power source before assisting.</p>
-                    <button class="openPopup" aria-label="Learn more about electric shock first aid">Read More</button>
+                    <p data-lang="card-electric-shock-desc">Turn off the power source before assisting.</p>
+                    <button class="openPopup" aria-label="Learn more about electric shock first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Electric Shock</h3>
+                                <h3 class="popup-title" data-lang="card-electric-shock-title">Electric Shock</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -283,14 +286,14 @@
                     </div>
                 </div>
                 <div class="card" data-title="Heart Attack">
-                    <h2>Heart Attack</h2>
+                    <h2 data-lang="card-heart-attack-title">Heart Attack</h2>
                     <img src="../images/heartattack.jpeg" alt="Heart attack scenario" height="250px">
-                    <p>Call emergency services and assist with aspirin if available.</p>
-                    <button class="openPopup" aria-label="Learn more about heart attack first aid">Read More</button>
+                    <p data-lang="card-heart-attack-desc">Call emergency services and assist with aspirin if available.</p>
+                    <button class="openPopup" aria-label="Learn more about heart attack first aid" data-lang="read-more">Read More</button>
                     <div class="popup-container">
                         <div class="popup">
                             <div class="popup-header">
-                                <h3 class="popup-title">Heart Attack</h3>
+                                <h3 class="popup-title" data-lang="card-heart-attack-title">Heart Attack</h3>
                                 <span class="closePopup" aria-label="Close popup">×</span>
                             </div>
                             <div class="popup-content">
@@ -308,41 +311,41 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>Health</h3>
+                <h3 data-lang="footer-health">Health</h3>
                 <ul>
-                    <li><a href="#">Nutrition</a></li>
-                    <li><a href="#">Exercise</a></li>
-                    <li><a href="#">Mental Health</a></li>
-                    <li><a href="#">First Aid</a></li>
+                    <li><a href="#" data-lang="footer-nutrition">Nutrition</a></li>
+                    <li><a href="#" data-lang="footer-exercise">Exercise</a></li>
+                    <li><a href="#" data-lang="footer-mental-health">Mental Health</a></li>
+                    <li><a href="#" data-lang="footer-first-aid">First Aid</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Hospital Guides</h3>
+                <h3 data-lang="footer-hospital-guides">Hospital Guides</h3>
                 <ul>
-                    <li><a href="#">Emergency Care</a></li>
-                    <li><a href="#">Doctor Visits</a></li>
-                    <li><a href="#">Health Tips</a></li>
-                    <li><a href="#">Insurance</a></li>
+                    <li><a href="#" data-lang="footer-emergency-care">Emergency Care</a></li>
+                    <li><a href="#" data-lang="footer-doctor-visits">Doctor Visits</a></li>
+                    <li><a href="#" data-lang="footer-health-tips">Health Tips</a></li>
+                    <li><a href="#" data-lang="footer-insurance">Insurance</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>About</h3>
+                <h3 data-lang="footer-about">About</h3>
                 <ul>
-                    <li><a href="#">Who We Are</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#" data-lang="footer-who-we-are">Who We Are</a></li>
+                    <li><a href="#" data-lang="footer-our-team">Our Team</a></li>
+                    <li><a href="#" data-lang="footer-careers">Careers</a></li>
+                    <li><a href="#" data-lang="footer-contact-us">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Stay Connected</h3>
+                <h3 data-lang="footer-stay-connected">Stay Connected</h3>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
-                <button class="theme-toggle" aria-label="Toggle dark mode">Toggle Dark Mode</button>
+                <button class="theme-toggle" aria-label="Toggle dark mode" data-lang="theme-toggle">Toggle Dark Mode</button>
             </div>
         </div>
     </footer>
