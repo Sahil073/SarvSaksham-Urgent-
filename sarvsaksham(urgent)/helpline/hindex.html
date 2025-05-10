@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpline Numbers</title>
+    <link rel="icon" type="image/png" href="../images/">
+    <link rel="stylesheet" href="styles.css">
+    <link href="./hstyle.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">Emergency Help</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="ri-menu-line"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Firstaid/firstaid.html">First Aid</a></li>
+                <li><a href="./hindex.html">Helpline</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Helpline Numbers</h1>
+        <p>Emergency contacts across India</p>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <input type="text" id="searchBar" placeholder="Search for a state..." onkeyup="searchStates()">
+    </section>
+
+    <!-- Common Helpline Numbers -->
+    <section class="common-helplines">
+        <h2>Common Helpline Numbers (Nationwide)</h2>
+        <div class="helpline-list">
+            <p><strong>All-in-one Emergency (Police, Fire, Ambulance):</strong> 112</p>
+            <p><strong>Women Helpline:</strong> 1091 / 181</p>
+            <p><strong>Child Helpline:</strong> 1098</p>
+            <p><strong>Health Ministry Helpline:</strong> 1075</p>
+            <p><strong>Cyber Fraud Helpline:</strong> 1930</p>
+            <p><strong>Police:</strong> 100</p>
+            <p><strong>Fire:</strong> 101</p>
+            <p><strong>Ambulance:</strong> 102 / 108</p>
+            <p><strong>Disaster Management:</strong> 1077</p>
+            <p><strong>Kisan Call Centre:</strong> 1551</p>
+            <p><strong>Voter Helpline:</strong> 1950</p>
+        </div>
+    </section>
+
+    <!-- State-Wise Helplines -->
+    <section class="state-helplines">
+        <h2>State-Wise Helplines</h2>
+        <div class="state-container">
+            <!-- Haryana -->
+            <div class="state-card" data-state="Haryana">
+                <h3>Haryana</h3>
+                <p><strong>Police:</strong> 100 / 112</p>
+                <p><strong>Fire:</strong> 101</p>
+                <p><strong>Ambulance:</strong> 102 / 108 / 2782457</p>
+                <p><strong>Govt. Hospital (P.G.I.):</strong> 2746018, 2747005</p>
+            </div>
+
+            <!-- Maharashtra (Mumbai) -->
+            <div class="state-card" data-state="Maharashtra">
+                <h3>Maharashtra (Mumbai)</h3>
+                <p><strong>Police:</strong> 100 / 112</p>
+                <p><strong>Fire:</strong> 101 / 112 / 23085991</p>
+                <p><strong>Ambulance:</strong> 102 / 108 / 18002664242 (DIAL4242)</p>
+                <p><strong>Govt. Hospitals:</strong> Add via form below</p>
+            </div>
+
+            <!-- Uttar Pradesh -->
+            <div class="state-card" data-state="Uttar Pradesh">
+                <h3>Uttar Pradesh</h3>
+                <p><strong>Police:</strong> 100 / 112</p>
+                <p><strong>Fire:</strong> 101</p>
+                <p><strong>Ambulance:</strong> 102 / 108</p>
+                <p><strong>Govt. Hospitals:</strong> Add via form below</p>
+            </div>
+
+            <!-- West Bengal -->
+            <div class="state-card" data-state="West Bengal">
+                <h3>West Bengal</h3>
+                <p><strong>Police:</strong> 100 / 112</p>
+                <p><strong>Fire:</strong> 101</p>
+                <p><strong>Ambulance:</strong> 102 / 108</p>
+                <p><strong>Govt. Hospitals:</strong> Add via form below</p>
+            </div>
+
+            <!-- Tamil Nadu (Coimbatore) -->
+            <div class="state-card" data-state="Tamil Nadu">
+                <h3>Tamil Nadu (Coimbatore)</h3>
+                <p><strong>Police:</strong> 100 / 112</p>
+                <p><strong>Fire:</strong> 101</p>
+                <p><strong>Ambulance:</strong> 102 / 108</p>
+                <p><strong>Govt. Hospitals:</strong> Add via form below</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Form -->
+    <section class="hospital-form">
+        <h2>Add Government Hospital Contact</h2>
+        <form id="hospitalForm" onsubmit="addHospital(event)">
+            <label for="hospitalName">Hospital Name:</label>
+            <input type="text" id="hospitalName" placeholder="Enter hospital name" required>
+            
+            <label for="hospitalNumber">Contact Number:</label>
+            <input type="tel" id="hospitalNumber" placeholder="Enter contact number" required>
+            
+            <label for="hospitalLocation">Location (State):</label>
+            <input type="text" id="hospitalLocation" placeholder="Enter state" required>
+            
+            <button type="submit" class="button">Add Hospital</button>
+        </form>
+        <div id="hospitalList" class="hospital-list">
+            <h3>Added Hospitals</h3>
+            <!-- Hospitals will be added here dynamically -->
+        </div>
+    </section>
+
+    <script>
+        // Search Functionality
+        function searchStates() {
+            const searchInput = document.getElementById('searchBar').value.toLowerCase();
+            const stateCards = document.querySelectorAll('.state-card');
+            
+            stateCards.forEach(card => {
+                const stateName = card.getAttribute('data-state').toLowerCase();
+                if (stateName.includes(searchInput)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Hospital Form Functionality
+        function addHospital(event) {
+            event.preventDefault();
+            const name = document.getElementById('hospitalName').value;
+            const number = document.getElementById('hospitalNumber').value;
+            const location = document.getElementById('hospitalLocation').value;
+
+            const hospitalList = document.getElementById('hospitalList');
+            const hospitalEntry = document.createElement('p');
+            hospitalEntry.innerHTML = `<strong>${name}</strong> (${location}): ${number}`;
+            hospitalList.appendChild(hospitalEntry);
+
+            // Clear form
+            document.getElementById('hospitalForm').reset();
+        }
+
+        // Navbar Toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

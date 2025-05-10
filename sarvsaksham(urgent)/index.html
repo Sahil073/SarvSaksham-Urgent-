@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Help</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="../sarvsaksham(urgent)/images/mainlogo.png">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">Emergency Help</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="ri-menu-line"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./Firstaid/firstaid.html">First Aid</a></li>
+                <li><a href="./helpline/hindex.html">Helpline</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <video controls class="emergency-video">
+            <source src="./images/document_6111709144761244156.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <main>
+        <a href="./Firstaid/firstaid.html" class="button first-aid">Get First Aid Help</a>
+        <a href="./helpline/hindex.html" class="button helpline">Call for Help</a>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
